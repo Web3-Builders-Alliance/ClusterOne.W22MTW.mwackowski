@@ -144,11 +144,6 @@ mod tests {
 
         // create message and get response
         let res = create_single_message(deps.as_mut(), SENDER);
-        // let msg = ExecuteMsg::AddMessage { 
-        //             topic: TOPIC.to_string(), 
-        //             message: MESSAGE_TEXT.to_string()};
-        // let res = execute(
-        //     deps.as_mut(), mock_env(), mock_info(SENDER, &[]), msg).unwrap();
             
         // check attributes
         assert_eq!(
@@ -172,11 +167,6 @@ mod tests {
         // create messages and check response for second message only
         // (single message response was tested in _add_message() test)
         let _res_1 = create_single_message(deps.as_mut(), SENDER);
-        // let msg_1 = ExecuteMsg::AddMessage { 
-        //     topic: TOPIC.to_string(), 
-        //     message: MESSAGE_TEXT.to_string()};        
-        // let _res_1 = execute(
-        //     deps.as_mut(), mock_env(), mock_info(SENDER, &[]), msg_1);
 
         let topic_2 = "funniest topic";
         let msg_text_2 = "that's even better than before!";
